@@ -73,7 +73,7 @@
 
 .faq-accordion-card__faq-question {
   margin: 0;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: lighter;
 }
 
@@ -89,8 +89,13 @@
   cursor: pointer;
 }
 
+.faq-accordion-card__faq-container-icon--selected {
+  transform: rotate(180deg);
+}
+
 .faq-accordion-card__faq-answer {
   margin: 10px 15px 0 0;
-  font-size: 11px;
+  font-size: 10px;
   width: 100%;
+  transition: ease-in-out 200ms;
 }
