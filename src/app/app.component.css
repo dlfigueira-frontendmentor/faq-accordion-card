@@ -1,0 +1,50 @@
+.main-view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.main-view__background {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+}
+
+.faq-accordion-card {
+  display: flex;
+  position: relative;
+  height: 70%;
+  width: 90%;
+  top: calc(5% - 15% + 107px);
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+  background: white;
+}
+
+.faq-accordion-card__illustration-background {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: url("../assets/bg-pattern-mobile.svg") no-repeat top calc(5vh + 100px) center;
+  z-index: 1;
+}
+
+.faq-accordion-card__illustration {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: url("../assets/illustration-woman-online-mobile.svg") no-repeat top 5vh right calc(50% + 16px);
+  z-index: 1;
+}
+
+.faq-accordion-card__title {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 100px;
+  font-weight: bold;
+}
