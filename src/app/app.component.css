@@ -14,18 +14,6 @@
   background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
 }
 
-.faq-accordion-card {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  height: 70%;
-  width: 90%;
-  top: calc(5% - 15% + 107px);
-  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.2);
-  border-radius: 25px;
-  background: white;
-}
-
 .faq-accordion-card__illustration-background {
   position: absolute;
   height: calc(104px + 5vh + 100px);
@@ -71,12 +59,6 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.25);
 }
 
-.faq-accordion-card__faq-question {
-  margin: 0;
-  font-size: 13px;
-  font-weight: lighter;
-}
-
 .faq-accordion-card__faq-question--selected {
   color: black;
   font-weight: bold;
@@ -93,9 +75,70 @@
   transform: rotate(180deg);
 }
 
-.faq-accordion-card__faq-answer {
-  margin: 10px 15px 0 0;
-  font-size: 10px;
-  width: 100%;
-  transition: ease-in-out 200ms;
+/* Devices up to 576px */
+@media (max-width: 576px) {
+  .faq-accordion-card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 70%;
+    width: 90%;
+    top: calc(5% - 15% + 107px);
+    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    background: white;
+  }
+
+  .faq-accordion-card__faq-question {
+    margin: 0;
+    font-size: 12px;
+    font-weight: lighter;
+  }
+
+  .faq-accordion-card__faq-answer {
+    margin: 10px 15px 0 0;
+    font-size: 10px;
+    width: 100%;
+  }
 }
+
+/* Devices from 321px */
+@media (min-width: 321px) {
+  .faq-accordion-card__faq-question {
+    margin: 0;
+    font-size: 14px;
+    font-weight: lighter;
+  }
+
+  .faq-accordion-card__faq-answer {
+    margin: 10px 15px 0 0;
+    font-size: 11px;
+    width: 100%;
+  }
+}
+
+/*
+@media (min-width: 577px) {
+  .faq-accordion-card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 70%;
+    width: 90%;
+    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    background: white;
+  }
+
+  .faq-accordion-card__faq-question {
+    margin: 0;
+    font-size: 14px;
+    font-weight: lighter;
+  }
+
+  .faq-accordion-card__faq-answer {
+    margin: 10px 15px 0 0;
+    font-size: 11px;
+    width: 100%;
+  }
+}*/
