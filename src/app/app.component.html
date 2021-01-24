@@ -3,8 +3,18 @@
   <div class="faq-accordion-card__illustration-background"></div>
   <div class="faq-accordion-card__illustration"></div>
   <article class="faq-accordion-card">
-    <header class="faq-accordion-card__title">
-      <h1>FAQ</h1>
+    <header>
+      <h1 class="faq-accordion-card__title">FAQ</h1>
     </header>
+    <ul class="faq-accordion-card__faq-list">
+      <li *ngFor="let faq of faqs">
+        <section class="faq-accordion-card__faq" (click)="onFaqIconClicked(faq)">
+          <h2 class="faq-accordion-card__faq-question"
+          [ngClass]="{'faq-accordion-card__faq-question--selected': faq.selected}">{{faq.question}}</h2>
+          <img src="../assets/icon-arrow-down.svg" alt="icon-arrow-down" class="faq-accordion-card__faq-container-icon">
+          <p class="faq-accordion-card__faq-answer" *ngIf="faq.selected">{{faq.answer}}</p>
+        </section>
+      </li>
+    </ul>
   </article>
 </div>
