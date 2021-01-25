@@ -1,6 +1,5 @@
 .main-view {
   display: flex;
-  align-items: center;
   justify-content: center;
   position: relative;
   width: 100vw;
@@ -13,38 +12,6 @@
   width: 100%;
   background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
   z-index: -1;
-}
-
-.faq-accordion-card__illustration-background {
-  position: fixed;
-  height: calc(104px + 5vh + 100px);
-  width: 100%;
-  top: 0;
-  left: 0;
-  background: url("../assets/bg-pattern-mobile.svg") no-repeat top calc(5vh + 100px) center;
-  z-index: 1;
-}
-
-.faq-accordion-card__illustration {
-  position: fixed;
-  height: calc(196px + 5vh);
-  width: 100%;
-  top: 0;
-  left: 0;
-  background: url("../assets/illustration-woman-online-mobile.svg") no-repeat top 5vh right calc(50% + 16px);
-  z-index: 1;
-}
-
-.faq-accordion-card {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  height: 70%;
-  width: 90%;
-  top: calc(5% - 15% + 107px);
-  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.2);
-  border-radius: 25px;
-  background: white;
 }
 
 .faq-accordion-card__title {
@@ -74,11 +41,6 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.25);
 }
 
-.faq-accordion-card__faq-question--selected {
-  color: black;
-  font-weight: bold;
-}
-
 .faq-accordion-card__faq-container-icon {
   height: 7px;
   width: 10px;
@@ -96,14 +58,56 @@
   font-weight: lighter;
 }
 
+.faq-accordion-card__faq-question--selected {
+  color: black;
+  font-weight: bold;
+}
+
 .faq-accordion-card__faq-answer {
   margin: 10px 15px 0 0;
   font-size: 10px;
   width: 100%;
 }
 
+@media (max-width: 768px) {
+  .faq-accordion-card__illustration-background {
+    position: absolute;
+    height: calc(104px + 5vh + 100px);
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: url("../assets/bg-pattern-mobile.svg") no-repeat top calc(5vh + 100px) center;
+    z-index: 1;
+  }
+
+  .faq-accordion-card__illustration {
+    position: absolute;
+    height: calc(196px + 5vh);
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: url("../assets/illustration-woman-online-mobile.svg") no-repeat top 5vh right calc(50% + 16px);
+    z-index: 1;
+  }
+
+  .faq-accordion-card__desktop-additional-illustration {
+    display: none;
+  }
+
+  .faq-accordion-card {
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    width: 90%;
+    margin-top: calc(5vh + 107px);
+    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    background: white;
+  }
+}
+
 /* Devices from 321px */
-@media (min-width: 321px) {
+@media (min-width: 321px) and (max-width: 768px) {
   .faq-accordion-card__title {
     margin-bottom: 15px;
   }
@@ -122,7 +126,7 @@
 }
 
 /* Devices from 426px */
-@media (min-width: 426px) {
+@media (min-width: 426px) and (max-width: 768px) {
   .faq-accordion-card {
     width: 80%;
   }
@@ -154,54 +158,41 @@
 @media (min-width: 769px) {
   .faq-accordion-card__illustration-background {
     position: absolute;
-    height: calc(104px + 5vh + 100px);
+    height: 100%;
     width: 100%;
+    top: 0;
     left: 0;
-    background: url("../assets/bg-pattern-desktop.svg") no-repeat top center;
+    background: url("../assets/bg-pattern-desktop.svg") no-repeat center left;
     z-index: 1;
   }
 
   .faq-accordion-card__illustration {
     position: absolute;
-    height: calc(196px + 5vh);
-    width: 100%;
-    left: 0;
-    background: url("../assets/illustration-woman-online-desktop.svg") no-repeat top right;
+    height: 100%;
+    width: 380px;
+    top: 0;
+    background: url("../assets/illustration-woman-online-desktop.svg") no-repeat center right;
     z-index: 1;
-    overflow: hidden;
+  }
+
+  .faq-accordion-card__desktop-additional-illustration {
+    position: absolute;
+    height: 110px;
+    width: 140px;
+    top: calc(50% - 184px/2);
+    background: url("../assets/illustration-box-desktop.svg") no-repeat top right;
+    z-index: 1;
   }
 
   .faq-accordion-card {
     display: flex;
+    align-self: center;
     flex-direction: column;
-    position: relative;
     height: 70%;
-    width: 90%;
+    width: 70%;
+    margin-left: 5%;
     box-shadow: 0 30px 30px rgba(0, 0, 0, 0.2);
     border-radius: 25px;
     background: white;
-    z-index: 10;
-  }
-
-  .faq-accordion-card__title {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    padding-top: 100px;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: black;
-  }
-
-  .faq-accordion-card__faq-question {
-    margin: 0;
-    font-size: 14px;
-    font-weight: lighter;
-  }
-
-  .faq-accordion-card__faq-answer {
-    margin: 10px 15px 0 0;
-    font-size: 11px;
-    width: 100%;
   }
 }
