@@ -9,7 +9,7 @@ html, body {
 
 html {
   font-family: 'Kumbh Sans', sans-serif;
-  color: rgba(0, 0, 0, 0.5);
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
 }
 
 body {

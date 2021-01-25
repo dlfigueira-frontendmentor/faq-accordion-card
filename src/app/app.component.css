@@ -2,16 +2,8 @@
   display: flex;
   justify-content: center;
   position: relative;
-  width: 100vw;
-  height: 100vh;
-}
-
-.main-view__background {
-  position: absolute;
-  height: 100%;
   width: 100%;
-  background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
-  z-index: -1;
+  height: 100%;
 }
 
 .faq-accordion-card__title {
