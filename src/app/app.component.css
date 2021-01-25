@@ -2,8 +2,42 @@
   display: flex;
   justify-content: center;
   position: relative;
-  width: 100%;
   height: 100%;
+}
+
+.faq-accordion-card__illustration-background {
+  position: absolute;
+  height: 104px;
+  width: 100%;
+  left: 0;
+  background: url("../assets/bg-pattern-mobile.svg") no-repeat top center;
+  z-index: 1;
+}
+
+.faq-accordion-card__illustration-1 {
+  position: absolute;
+  height: 196px;
+  width: 100%;
+  top: calc(20% - 107px);
+  left: 0;
+  background: url("../assets/illustration-woman-online-mobile.svg") no-repeat top right calc(50% + 16px);
+  z-index: 1;
+}
+
+.faq-accordion-card__illustration-2 {
+  display: none;
+}
+
+.faq-accordion-card {
+  display: flex;
+  flex-direction: column;
+  height: 75%;
+  width: 90%;
+  padding-bottom: 10px;
+  margin-top: 20vh;
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+  background: white;
 }
 
 .faq-accordion-card__title {
@@ -61,45 +95,7 @@
   width: 100%;
 }
 
-@media (max-width: 768px) {
-  .faq-accordion-card__illustration-background {
-    position: absolute;
-    height: calc(104px + 5vh + 100px);
-    width: 100%;
-    top: 0;
-    left: 0;
-    background: url("../assets/bg-pattern-mobile.svg") no-repeat top calc(5vh + 100px) center;
-    z-index: 1;
-  }
-
-  .faq-accordion-card__illustration {
-    position: absolute;
-    height: calc(196px + 5vh);
-    width: 100%;
-    top: 0;
-    left: 0;
-    background: url("../assets/illustration-woman-online-mobile.svg") no-repeat top 5vh right calc(50% + 16px);
-    z-index: 1;
-  }
-
-  .faq-accordion-card__desktop-additional-illustration {
-    display: none;
-  }
-
-  .faq-accordion-card {
-    display: flex;
-    flex-direction: column;
-    height: 70%;
-    width: 90%;
-    margin-top: calc(5vh + 107px);
-    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.2);
-    border-radius: 25px;
-    background: white;
-  }
-}
-
-/* Devices from 321px */
-@media (min-width: 321px) and (max-width: 768px) {
+@media (min-width: 321px) and (max-width: 425px) {
   .faq-accordion-card__title {
     margin-bottom: 15px;
   }
@@ -117,7 +113,6 @@
   }
 }
 
-/* Devices from 426px */
 @media (min-width: 426px) and (max-width: 768px) {
   .faq-accordion-card {
     width: 80%;
@@ -146,7 +141,6 @@
   }
 }
 
-/* Devices from 769px */
 @media (min-width: 769px) {
   .faq-accordion-card__illustration-background {
     position: absolute;
@@ -171,7 +165,7 @@
     position: absolute;
     height: 110px;
     width: 140px;
-    top: calc(50% - 184px/2);
+    top: calc(50% - 184px / 2);
     background: url("../assets/illustration-box-desktop.svg") no-repeat top right;
     z-index: 1;
   }
