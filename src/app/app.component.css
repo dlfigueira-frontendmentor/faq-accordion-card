@@ -29,6 +29,8 @@
 }
 
 .faq-accordion-card {
+  display: flex;
+  flex-direction: column;
   height: 75%;
   width: 90%;
   padding-bottom: 10px;
@@ -158,9 +160,8 @@
   }
 
   .faq-accordion-card__illustration-background {
-    height: 85%;
+    height: 70%;
     width: 40%;
-    top: 0;
     left: auto;
     background: url("../assets/bg-pattern-desktop.svg") no-repeat center right;
   }
